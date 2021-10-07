@@ -22,6 +22,8 @@ override.tf.json
 *_override.tf.json
 
 terraform/providers.tf
+terraform/key.pem
+ansible/key.pem
 key.pem
 # Include override files you do wish to add to version control using negated pattern
 #
