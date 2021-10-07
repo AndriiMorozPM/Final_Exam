@@ -1,0 +1,15 @@
+- name: Deploy
+  gather_facts: false
+  hosts: [all]
+  become: yes
+
+  tasks:
+
+    - name: Create deploy
+      docker_container:
+        name: deploy
+        image: andriimoroz3010/examappdeploy
+        pull: true
+        state: started
+        ports:
+          - "80:80"
