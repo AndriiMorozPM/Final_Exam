@@ -33,4 +33,4 @@ jobs:
           db=$(grep "rds_endpoint" terraform.log | awk -F  ":" '{print $1}' )
           db=${db//'rds_endpoint = "'}
           echo $db
-          mysql --host $db --port 3306 -u exam-b -p exam-db exam-db < mysql/exam-db.sql
+          mysql --host $db --port 3306 -uexamdb -pexamdb examdb < mysql/examdb.sql
