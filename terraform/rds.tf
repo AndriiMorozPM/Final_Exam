@@ -4,7 +4,7 @@ resource "aws_db_instance" "exam-rds" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  name                 = "exam"
+  name                 = "exam-db"
   skip_final_snapshot  = true
   publicly_accessible  = true
   username             = "username"

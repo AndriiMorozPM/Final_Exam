@@ -63,7 +63,7 @@ resource "aws_route_table_association" "exam-crta-public-subnet-2" {
   route_table_id = aws_route_table.exam-routetable.id
 }
 
-esource "aws_security_group" "exam-securitygroups" {
+resource "aws_security_group" "exam-securitygroups" {
   vpc_id = aws_vpc.exam-vpc.id
 
   egress {

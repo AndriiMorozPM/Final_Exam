@@ -3,7 +3,7 @@ SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+03:00";
 
-CREATE TABLE `exam_db` (
+CREATE TABLE `exam-db` (
   `id` int(6) UNSIGNED NOT NULL,
   `firstname` varchar(30) NOT NULL,
   `lastname` varchar(30) NOT NULL,
@@ -11,12 +11,12 @@ CREATE TABLE `exam_db` (
   `reg_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `exam_db` (`id`, `firstname`, `lastname`, `email`, `reg_date`) VALUES
+INSERT INTO `exam-db` (`id`, `firstname`, `lastname`, `email`, `reg_date`) VALUES
 (1, 'Andrii', 'Moroz', 'andrii.moroz.rob@gmail.com', '2021-10-07 12:01:44');
 
-ALTER TABLE `exam_db`
+ALTER TABLE `exam-db`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `exam_db`
+ALTER TABLE `exam-db`
   MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
