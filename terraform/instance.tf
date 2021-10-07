@@ -6,6 +6,7 @@ resource "aws_instance" "linux-instance" {
 
   vpc_security_group_ids = [aws_security_group.exam-securitygroups.id]
 
+  key_name = "key"
 
   tags = {
     "Name" = "linux-instance"
