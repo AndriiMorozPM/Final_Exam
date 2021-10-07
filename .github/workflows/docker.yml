@@ -3,8 +3,8 @@ name: docker
 on:
   workflow_run:
     workflows:
-      - ansible
-    types: 
+      - Ansible
+    types:
       - completed
     branches:
       - main
