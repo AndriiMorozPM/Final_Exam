@@ -11,7 +11,7 @@ resource "aws_vpc" "exam-vpc" {
 }
 
 resource "aws_subnet" "exam-subnet-public-1" {
-  vpc_id                  = aws_vpc.lesson12-vpc.id
+  vpc_id                  = aws_vpc.exam-vpc.id
   cidr_block              = "172.31.0.0/20"
   map_public_ip_on_launch = true
   availability_zone       = "eu-central-1a"
@@ -22,7 +22,7 @@ resource "aws_subnet" "exam-subnet-public-1" {
 }
 
 resource "aws_subnet" "exam-subnet-public-2" {
-  vpc_id                  = aws_vpc.lesson12-vpc.id
+  vpc_id                  = aws_vpc.exam-vpc.id
   cidr_block              = "172.31.16.0/20"
   map_public_ip_on_launch = true
   availability_zone       = "eu-central-1b"
